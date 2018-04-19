@@ -1,15 +1,26 @@
 import java.util.ArrayList;
+import java.util.NoSuchElementException;
 public class QQKachoo<D> implements Deque<D> {
     private int _size; 
     private int _first, _last;
     
     ArrayList<D> deque = new ArrayList<D>(); 
 
-    public QQkachoo() { 
+    public QQKachoo() { 
 	_size = _first = _last = 0;
     }
+
+    public D removeFirst() { //O(n)
+	if (isEmpty()) {
+	    throw new NoSuchElementException();
+	}
+	D temp = deque.get(0);
+	deque.remove(0);
+	_size--;
+	return temp;
+    }
     
-    public void addLast( D x ) {
+    public void addLast( D x ) { //O(1)
 	if (isEmpty()) {
 	    deque.add(x);
 	    _first = _last = 0;
@@ -18,11 +29,14 @@ public class QQKachoo<D> implements Deque<D> {
 	    deque.add(_last + 1, x);
 	    _last++; 
 	}
-	_size++
+	_size++;
     }
+
+    //public addFirst( D x) {
+
+    //}
     
-    
-    public isEmpty() {
+    public boolean isEmpty() {
 	return _size == 0;
     }
     
