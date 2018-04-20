@@ -20,16 +20,19 @@ public class QQKachoo<D> implements Deque<D> {
 	return temp;
     }
 
-    public D removeLast() {
+    public D removeLast() { //O(1)
+	if (isEmpty()) {
+	    throw new NoSuchElementException();
+	}
 	D temp = deque.get(_size);
 	deque.remove(_size);
 	_size--;
 	return temp;
     }
 
-    public void addFirst( D x ) {
+    public void addFirst( D x ) { //O(1)
 	deque.add(0, x);
-	_size++;
+	    _size++;
     }
     
     public void addLast( D x ) { //O(1)
@@ -61,14 +64,14 @@ public class QQKachoo<D> implements Deque<D> {
 	}
     }
 
-    public D getFirst() {
+    public D getFirst() { //O(1)
 	if (isEmpty()) {
 	    throw new NoSuchElementException();
 	}
 	return deque.get(0);
     }
 
-    public D getLast() {
+    public D getLast() { //O(1)
 	if (isEmpty()) {
 	    throw new NoSuchElementException();
 	}
