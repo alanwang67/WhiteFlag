@@ -19,7 +19,7 @@ public interface Deque<Card> {
     //Retrieves, but does not remove, the last element of this deque,
     //or returns null if this deque is empty.
     public Card peekLast();
-
+    
     //Retrieves, but does not remove, the first element of this deque.
     //This method differs from peekFirst only in that it throws an exception
     //if this deque is empty.
@@ -29,4 +29,16 @@ public interface Deque<Card> {
     //This method differs from peekFirst only in that it throws an exception
     //if this deque is empty.
     public Card getLast();
+
+    //Retrieves and removes the first element of this deque,
+    //or returns null if this deque is empty.
+    public Card pollFirst();
+
+    //Retrieves and removes the last element of this deque,
+    //or returns null if this deque is empty.
+    public Card pollLast();
+    
+    //Returns the number of elements in this deque.
+    public int size();
+    
 }//end interface Deque                                                                                           

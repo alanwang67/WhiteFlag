@@ -24,8 +24,8 @@ public class QQKachoo<D> implements Deque<D> {
 	if (isEmpty()) {
 	    throw new NoSuchElementException();
 	}
-	D temp = deque.get(_size);
-	deque.remove(_size);
+	D temp = deque.get(_last);
+	deque.remove(_last);
 	_size--;
 	return temp;
     }
@@ -52,7 +52,10 @@ public class QQKachoo<D> implements Deque<D> {
     }
     
     public D peekFirst() { //O(1)
-	return deque.get(0);
+	if (isEmpty()) {
+	    return null;
+	}
+	return deque.get(_first);
     }
 
     public D peekLast() { //O(1)
@@ -60,7 +63,7 @@ public class QQKachoo<D> implements Deque<D> {
 	    return null;
 	}
 	else {
-	    return deque.get(_size);
+	    return deque.get(_last);
 	}
     }
 
@@ -68,16 +71,34 @@ public class QQKachoo<D> implements Deque<D> {
 	if (isEmpty()) {
 	    throw new NoSuchElementException();
 	}
-	return deque.get(0);
+	return deque.get(_first);
     }
 
     public D getLast() { //O(1)
 	if (isEmpty()) {
 	    throw new NoSuchElementException();
 	}
-	return deque.get(_size);
+	return deque.get(_last);
+    }
+    
+    public D pollFirst() { //O(1)
+	if (isEmpty()) {
+	    return null;
+	}
+	return deque.get(_first);
     }
 
+    public D pollLast() { //O(1)
+	if (isEmpty()) {
+	    return null;
+	}
+	
+	return deque.get(_last);
+    }
+
+    public int size() { //O(1)
+	return _size;
+    }
     
     public static void main ( String[] args) {
     }
