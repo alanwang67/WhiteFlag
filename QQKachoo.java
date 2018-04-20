@@ -33,7 +33,8 @@ public class QQKachoo<D> implements Deque<D> {
 
     public void addFirst( D x ) { //O(1)
 	deque.add(0, x);
-	    _size++;
+        _size++;
+	_last = _size - 1;
     }
     
     public void addLast( D x ) { //O(1)
@@ -101,7 +102,7 @@ public class QQKachoo<D> implements Deque<D> {
 	return _size;
     }
     
-    public boolean removeFirstOcurrence(D x){ //O(n)
+    public boolean removeFirstOccurrence(D x){ //O(n)
 	if (x == null){
 	    throw new NullPointerException();
 	}
@@ -110,14 +111,17 @@ public class QQKachoo<D> implements Deque<D> {
 	}
 	for (int i = 0; i < _size;i++){
 	    if (deque.get(i).equals(x)){
+		if(i == _first){
+		    _first ++;
+		}
+		else{
+		    _last --;
+		}
 		deque.remove(i);
 		_size--;
 		return true;
 	    }
 	}
 	return false;
-    }
-    
-    public static void main ( String[] args) {
     }
 }

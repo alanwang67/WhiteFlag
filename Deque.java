@@ -43,6 +43,6 @@ public interface Deque<Card> {
 
     //Removes the first occurrence of the specified element from this deque. 
     //If the deque does not contain the element, it is unchanged
-    public boolean removeFirstOcurrence(Card x);
+    public boolean removeFirstOccurrence(Card x);
     
 }//end interface Deque                                                                                           
