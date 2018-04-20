@@ -52,4 +52,4 @@ a doubly node-based architecturer.
 # Development Plan
 Implement methods around isEmpty starting with the adding methods in order to construct our basic deque. After that, we will implement the peek and the get methods and move 
 onto remove elements from deque. Then, we will figure out what more methods we need to implement in order to have a functional deque that allows for the best usage of it that 
-sets it apart from other Queue-like structures.
+sets it apart from other Queue-like structures. To finish off our development, we will include a Driver file that tests for functionality of our Deque.
