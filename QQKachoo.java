@@ -22,6 +22,7 @@ public class QQKachoo<D> implements Deque<D> {
 	D temp = deque.get(0);
 	deque.remove(0);
 	_size--;
+	_last = _size - 1;
 	return temp;
     }
 
@@ -32,6 +33,7 @@ public class QQKachoo<D> implements Deque<D> {
 	D temp = deque.get(_last);
 	deque.remove(_last);
 	_size--;
+	_last = _size - 1;
 	return temp;
     }
 
