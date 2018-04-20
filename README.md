@@ -24,7 +24,7 @@ Alan Wang
 Methods were chosen based on similarity to useability in a deque in which objects can be removed from the front or the back. Any methods that seemed unique to deque were later implemented in order to maintain functionality.
 Methods were implemented based on easiness and runnability in priority. Any methods with similar functionality to one of higher priority were implemented later on. 
 
-##(Top --> High | Bottom --> Low)
+## (Top --> High | Bottom --> Low)
 
 	* isEmpty()
 	* size()
