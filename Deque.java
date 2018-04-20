@@ -1,3 +1,7 @@
+//Team WhiteFlag (George Liang, Alan Wang)
+//APCS2 pd08
+//L02 -- All Hands on Deque!
+//2018-04-19
 public interface Deque<Card> {
 
     //Retrieves and removes the first element of this deque.

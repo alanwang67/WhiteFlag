@@ -1,3 +1,7 @@
+//Team WhiteFlag (George Liang, Alan Wang)
+//APCS2 pd08
+//L02 -- All Hands on Deque!
+//2018-04-19
 public class Driver{
     public static void main(String[]args){
     QQKachoo<String> t = new QQKachoo<String>();
