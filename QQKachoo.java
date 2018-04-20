@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.NoSuchElementException;
+import java.lang.NullPointerException;
 public class QQKachoo<D> implements Deque<D> {
     private int _size; 
     private int _first, _last;
@@ -98,6 +99,23 @@ public class QQKachoo<D> implements Deque<D> {
 
     public int size() { //O(1)
 	return _size;
+    }
+    
+    public boolean removeFirstOcurrence(D x){ //O(n)
+	if (x == null){
+	    throw new NullPointerException();
+	}
+	else if (isEmpty()){
+	    return false;
+	}
+	for (int i = 0; i < _size;i++){
+	    if (deque.get(i).equals(x)){
+		deque.remove(i);
+		_size--;
+		return true;
+	    }
+	}
+	return false;
     }
     
     public static void main ( String[] args) {

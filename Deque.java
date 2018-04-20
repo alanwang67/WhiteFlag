@@ -40,5 +40,9 @@ public interface Deque<Card> {
     
     //Returns the number of elements in this deque.
     public int size();
+
+    //Removes the first occurrence of the specified element from this deque. 
+    //If the deque does not contain the element, it is unchanged
+    public boolean removeFirstOcurrence(Card x);
     
 }//end interface Deque                                                                                           
