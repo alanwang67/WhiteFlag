@@ -13,8 +13,11 @@ Alan Wang
 	* peekLast()
 	* getFirst()
 	* getLast()
+	* pollFirst()
+	* pollLast()
 3. Primitive Returning Methods
 	* isEmpty()
+	* size()
 # To Do List
 	* As of 2018-04-18 we plan to get our addLast() and addFirst() methods done by implementing isEmpty() first as different operations are performed if a deque is empty.
 # Development Plan
