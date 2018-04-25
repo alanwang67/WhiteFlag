@@ -2,13 +2,13 @@
 //APCS2 pd08
 //L02 -- All Hands on Deque!
 //2018-04-19
-public interface Deque<Card> {
+public interface Deque<T> {
 
     //Retrieves and removes the first element of this deque.
-    public Card removeFirst();
+    public T removeFirst();
 
     //Retrieves and removes the last element of this deque.
-    public Card removeLast();
+    public T removeLast();
     
     //Inserts the specified element at the end of this deque if it is
     //possible to do so immediately without violating capacity restrictions
@@ -22,29 +22,29 @@ public interface Deque<Card> {
     public boolean isEmpty();
     
     //Returns the first element of the deque without dequeuing it.
-    public Card peekFirst();
+    public T peekFirst();
 
     //Retrieves, but does not remove, the last element of this deque,
     //or returns null if this deque is empty.
-    public Card peekLast();
+    public T peekLast();
     
     //Retrieves, but does not remove, the first element of this deque.
     //This method differs from peekFirst only in that it throws an exception
     //if this deque is empty.
-    public Card getFirst();
+    public T getFirst();
 
     //Retrieves, but does not remove, the last element of this deque.
     //This method differs from peekFirst only in that it throws an exception
     //if this deque is empty.
-    public Card getLast();
+    public T getLast();
 
     //Retrieves and removes the first element of this deque,
     //or returns null if this deque is empty.
-    public Card pollFirst();
+    public T pollFirst();
 
     //Retrieves and removes the last element of this deque,
     //or returns null if this deque is empty.
-    public Card pollLast();
+    public T pollLast();
     
     //Returns the number of elements in this deque.
     public int size();
