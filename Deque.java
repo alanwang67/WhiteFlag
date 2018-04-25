@@ -13,6 +13,10 @@ public interface Deque<Card> {
     //Inserts the specified element at the end of this deque if it is
     //possible to do so immediately without violating capacity restrictions
     public void addLast( Card x );
+    
+    //Inserts the specified element at the front of this deque if it is
+    //possible to do so immediately without violating capacity restrictions
+    public void addFirst( Card x );
 
     //Returns true if this queue is empty, otherwise returns false.
     public boolean isEmpty();
