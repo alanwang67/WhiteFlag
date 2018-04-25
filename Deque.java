@@ -12,11 +12,11 @@ public interface Deque<T> {
     
     //Inserts the specified element at the end of this deque if it is
     //possible to do so immediately without violating capacity restrictions
-    public void addLast( Card x );
+    public void addLast( T x );
     
     //Inserts the specified element at the front of this deque if it is
     //possible to do so immediately without violating capacity restrictions
-    public void addFirst( Card x );
+    public void addFirst( T x );
 
     //Returns true if this queue is empty, otherwise returns false.
     public boolean isEmpty();
@@ -51,6 +51,6 @@ public interface Deque<T> {
 
     //Removes the first occurrence of the specified element from this deque. 
     //If the deque does not contain the element, it is unchanged
-    public boolean removeFirstOccurrence(Card x);
+    public boolean removeFirstOccurrence(T x);
     
 }//end interface Deque                                                                                           
