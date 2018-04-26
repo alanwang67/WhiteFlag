@@ -5,45 +5,45 @@
 import java.util.ArrayList;
 import java.util.NoSuchElementException;
 import java.lang.NullPointerException;
-public class QQKachoo<D> implements Deque<D> {
+public class QQKachoo<T> implements Deque<T> {
     private int _size; 
     private int _first, _last;
     
-    ArrayList<D> deque = new ArrayList<D>(); 
+    ArrayList<T> deque = new ArrayList<T>(); 
 
     public QQKachoo() { 
 	_size = _first = _last = 0;
     }
 
-    public D removeFirst() { //O(n)
+    public T removeFirst() { //O(n)
 	if (isEmpty()) {
 	    throw new NoSuchElementException();
 	}
-	D temp = deque.get(0);
+	T temp = deque.get(0);
 	deque.remove(0);
 	_size--;
 	_last = _size - 1;
 	return temp;
     }
 
-    public D removeLast() { //O(1)
+    public T removeLast() { //O(1)
 	if (isEmpty()) {
 	    throw new NoSuchElementException();
 	}
-	D temp = deque.get(_last);
+	T temp = deque.get(_last);
 	deque.remove(_last);
 	_size--;
 	_last = _size - 1;
 	return temp;
     }
 
-    public void addFirst( D x ) { //O(1)
+    public void addFirst( T x ) { //O(1)
 	deque.add(0, x);
         _size++;
 	_last = _size - 1;
     }
     
-    public void addLast( D x ) { //O(1)
+    public void addLast( T x ) { //O(1)
 	if (isEmpty()) {
 	    deque.add(x);
 	    _first = _last = 0;
@@ -59,14 +59,14 @@ public class QQKachoo<D> implements Deque<D> {
 	return _size == 0;
     }
     
-    public D peekFirst() { //O(1)
+    public T peekFirst() { //O(1)
 	if (isEmpty()) {
 	    return null;
 	}
 	return deque.get(_first);
     }
 
-    public D peekLast() { //O(1)
+    public T peekLast() { //O(1)
 	if (isEmpty()) {
 	    return null;
 	}
@@ -75,28 +75,28 @@ public class QQKachoo<D> implements Deque<D> {
 	}
     }
 
-    public D getFirst() { //O(1)
+    public T getFirst() { //O(1)
 	if (isEmpty()) {
 	    throw new NoSuchElementException();
 	}
 	return deque.get(_first);
     }
 
-    public D getLast() { //O(1)
+    public T getLast() { //O(1)
 	if (isEmpty()) {
 	    throw new NoSuchElementException();
 	}
 	return deque.get(_last);
     }
     
-    public D pollFirst() { //O(1)
+    public T pollFirst() { //O(1)
 	if (isEmpty()) {
 	    return null;
 	}
 	return deque.get(_first);
     }
 
-    public D pollLast() { //O(1)
+    public T pollLast() { //O(1)
 	if (isEmpty()) {
 	    return null;
 	}
@@ -108,7 +108,7 @@ public class QQKachoo<D> implements Deque<D> {
 	return _size;
     }
     
-    public boolean removeFirstOccurrence(D x){ //O(n)
+    public boolean removeFirstOccurrence(T x){ //O(n)
 	if (x == null){
 	    throw new NullPointerException();
 	}

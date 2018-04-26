@@ -10,13 +10,13 @@ public interface Deque<T> {
     //Retrieves and removes the last element of this deque.
     public T removeLast();
     
-    //Inserts the specified element at the end of this deque if it is
-    //possible to do so immediately without violating capacity restrictions
-    public void addLast( T x );
-    
     //Inserts the specified element at the front of this deque if it is
     //possible to do so immediately without violating capacity restrictions
     public void addFirst( T x );
+    
+    //Inserts the specified element at the end of this deque if it is
+    //possible to do so immediately without violating capacity restrictions
+    public void addLast( T x );
 
     //Returns true if this queue is empty, otherwise returns false.
     public boolean isEmpty();
